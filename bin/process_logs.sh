@@ -15,3 +15,8 @@ for file in "$@"; do
 	bin/process_client_logs.sh "$OUTPUT_FOLDER"
 done
 
+bin/create_username_dist.sh "$TEMP_PATH"
+bin/create_hours_dist.sh "$TEMP_PATH"
+bin/create_country_dist.sh "$TEMP_PATH"
+
+bin/assemble_report.sh "$TEMP_PATH"
