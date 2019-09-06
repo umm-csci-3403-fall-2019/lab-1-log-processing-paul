@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-TEMP_PATH="/tmp/tmp_logs" #TODO use mktemp
 
-if [[ ! -d "$TEMP_PATH" ]]; then
-	mkdir "$TEMP_PATH"
-fi
+TEMP_PATH=$(mktemp --directory)
 
 for file in "$@"; do
 	OUTPUT_FOLDER="$TEMP_PATH"/$(basename "$file" "_secure.tgz")
@@ -20,3 +17,7 @@ bin/create_hours_dist.sh "$TEMP_PATH"
 bin/create_country_dist.sh "$TEMP_PATH"
 
 bin/assemble_report.sh "$TEMP_PATH"
+
+mv "$TEMP_PATH"/failed_login_summary.html failed_login_summary.html
+
+rm -r "$TEMP_PATH"
