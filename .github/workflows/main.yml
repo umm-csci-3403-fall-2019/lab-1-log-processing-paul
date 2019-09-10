@@ -9,10 +9,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Runs bats tests
-      uses: actions/bin/bats@master
+    - name: Run shellcheck on scripts
+      uses: actions/bin/shellcheck@master
       with: 
-        args: test/*.bats
+        args: bin/*.sh
         
   bats:
 
@@ -20,7 +20,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Runs bats tests
+    - name: Run bats tests
       uses: actions/bin/bats@master
       with: 
         args: test/*.bats
