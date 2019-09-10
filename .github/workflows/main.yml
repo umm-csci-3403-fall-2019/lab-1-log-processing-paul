@@ -32,4 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Test running script
-      run: bin/process_logs.sh log_files/*.tgz
+      run: |
+        bin/process_logs.sh log_files/*.tgz
+        ls
+        cat failed_login_summary.html
