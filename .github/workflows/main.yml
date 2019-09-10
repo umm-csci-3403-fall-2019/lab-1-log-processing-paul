@@ -22,7 +22,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run bats tests
       run: |
-        apt update && apt install -y bats
+        sudo apt update
+        sudo apt install -y bats
         bats test/*.bats
       
      # uses: actions/bin/bats@master
