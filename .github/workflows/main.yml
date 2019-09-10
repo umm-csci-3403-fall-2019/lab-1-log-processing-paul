@@ -21,9 +21,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run bats tests
-      uses: actions/bin/bats@master
-      with: 
-        args: test/*.bats
+      run: |
+        apt update && apt install -y bats
+        bats test/*.bats
+      
+     # uses: actions/bin/bats@master
+     # with: 
+     #   args: test/*.bats
         
   test-run:
 
