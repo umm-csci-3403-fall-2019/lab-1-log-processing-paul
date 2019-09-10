@@ -3,16 +3,23 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  shellcheck:
 
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v1
-    - name: Runs shellcheck on scripts
-      uses: actions/bin/shellcheck@master
+    - name: Runs bats tests
+      uses: actions/bin/bats@master
       with: 
-        args: bin/*.sh
+        args: test/*.bats
+        
+  bats:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
     - name: Runs bats tests
       uses: actions/bin/bats@master
       with: 
