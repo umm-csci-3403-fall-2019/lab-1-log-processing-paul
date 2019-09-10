@@ -24,3 +24,12 @@ jobs:
       uses: actions/bin/bats@master
       with: 
         args: test/*.bats
+        
+  test-run:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test running script
+      run: bin/process_logs.sh log_files/*.tgz
