@@ -1,5 +1,8 @@
 # Log processing
 
+[![Actions Status](https://github.com/umm-csci-3403-fall-2019/lab-1-log-processing-paul/workflows/CI/badge.svg)](https://github.com/umm-csci-3403-fall-2019/lab-1-log-processing-paul/actions)
+
+
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Overview](#overview)
