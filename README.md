@@ -589,16 +589,16 @@ approach was probably a bad idea.
 The `bin` folder in your finished project on Github folder should have the
 following files:
 
-* [ ] `assemble_report.sh`
-* [ ] `create_country_dist.sh`
-* [ ] `create_username_dist.sh`
-* [ ] `create_hours_dist.sh`
-* [ ] `process_client_logs.sh`
-* [ ] `process_logs.sh`
-* [ ] `wrap_contents.sh`
+* [x] `assemble_report.sh`
+* [x] `create_country_dist.sh`
+* [x] `create_username_dist.sh`
+* [x] `create_hours_dist.sh`
+* [x] `process_client_logs.sh`
+* [x] `process_logs.sh`
+* [x] `wrap_contents.sh`
 
 You shouldn't need to change anything in the other folders, but since your code
 depends on them, you should leave them in your project repository for
 completeness.
 
-* [ ] Be sure to submit a link to your team's repository in Canvas!
+* [x] Be sure to submit a link to your team's repository in Canvas!
