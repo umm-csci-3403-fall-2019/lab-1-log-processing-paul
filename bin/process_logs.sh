@@ -3,7 +3,7 @@
 # Setup the temporary directory to work in
 TEMP_PATH=$(mktemp --directory)
 
-# Loop through all provided arguments (files)
+# Loop through all provided arguments ([machine name]_secure.tgz files)
 for file in "$@"; do
 
 	#Find the base computer name from the file and use that as the output to extract into
